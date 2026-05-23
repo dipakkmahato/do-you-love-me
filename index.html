@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Do You Love Me? 💖</title>
+  <meta name="description" content="A special message just for you 💕" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
@@ -40,21 +41,23 @@
     <div class="music-tooltip">Play Sweet Music 🎵</div>
   </div>
 
+  <!-- Main Proposal Card — vertical layout -->
   <div class="container">
+
     <!-- Sweet decorative ribbon -->
     <div class="ribbon">To My Favorite Person 🌸</div>
 
     <!-- Generated couple illustration frame -->
     <div class="illustration-frame">
-      <img src="./couple_illustration.png" alt="Cute Chibi Couple" onerror="this.outerHTML='<div class=\"illustration-placeholder\">🧸💕</div>'" />
+      <img src="./couple_illustration.png" alt="Cute Chibi Couple"
+           onerror="this.style.display='none'; document.getElementById('illus-fallback').style.display='flex';" />
+      <div id="illus-fallback" class="illustration-placeholder" style="display:none;">🧸💕</div>
     </div>
 
-    <!-- Cute Tenor GIF embed -->
-    <div class="tenor-gif-embed" data-postid="22885016" data-share-method="host" data-aspect-ratio="1.04918" data-width="100%">
-      <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a>from
-      <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
+    <!-- Manja Sticker (local, always visible) -->
+    <div class="sticker-frame">
+      <img src="./manja_sticker.png" alt="Manja Love Sticker 💕" class="manja-sticker" />
     </div>
-    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
     <!-- Proposal Heading and Text -->
     <h1>Do you love me? 🤗</h1>

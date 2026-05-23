@@ -37,10 +37,12 @@ body {
   background-size: 400% 400%;
   animation: gradientBG 20s ease infinite;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
   position: relative;
+  padding: 30px 16px;
 }
 
 /* Dynamic background gradient animation */
@@ -1005,6 +1007,36 @@ p {
   animation: floatChibi 3s ease-in-out infinite alternate;
 }
 
+/* ==========================================
+   MANJA STICKER FRAME
+   ========================================== */
+.sticker-frame {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: stickerBounce 2.4s ease-in-out infinite;
+  filter: drop-shadow(0 8px 16px rgba(255, 107, 139, 0.2));
+}
+
+.manja-sticker {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.manja-sticker:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+@keyframes stickerBounce {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50%       { transform: translateY(-10px) rotate(2deg); }
+}
+
 @keyframes floatChibi {
   from { transform: translateY(0); }
   to { transform: translateY(-8px); }
@@ -1123,6 +1155,12 @@ p {
     max-width: 320px;
   }
 
+  /* Sticker */
+  .sticker-frame {
+    width: 130px;
+    height: 130px;
+  }
+
   /* Letter paper */
   .letter-paper {
     padding: 28px 20px;
@@ -1182,6 +1220,12 @@ p {
   .illustration-frame {
     width: 115px;
     height: 115px;
+  }
+
+  /* Sticker */
+  .sticker-frame {
+    width: 110px;
+    height: 110px;
   }
 
   /* Tenor GIF */
