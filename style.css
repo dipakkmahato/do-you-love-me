@@ -1009,3 +1009,453 @@ p {
   from { transform: translateY(0); }
   to { transform: translateY(-8px); }
 }
+
+/* ==========================================
+   RESPONSIVE DESIGN — TABLET & MOBILE
+   ========================================== */
+
+/* ---- Tablet: 481px → 768px ---- */
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding: 20px 0 40px;
+  }
+
+  /* Main card */
+  .container {
+    width: 92%;
+    max-width: 480px;
+    padding: 30px 22px;
+    gap: 20px;
+    border-radius: 26px;
+    margin: 20px auto;
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  /* Illustration */
+  .illustration-frame {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* Tenor GIF */
+  .tenor-gif-embed {
+    max-width: 160px;
+  }
+
+  /* Buttons */
+  .btn {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .btn a {
+    font-size: 1rem;
+    padding: 13px 28px;
+    min-width: 110px;
+  }
+
+  /* Music Widget */
+  .music-widget {
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    gap: 10px;
+  }
+
+  .music-widget:hover .music-details {
+    width: 180px;
+  }
+
+  /* Envelope overlay */
+  .envelope-intro-text {
+    font-size: 1.7rem;
+    margin-bottom: 28px;
+  }
+
+  .envelope-wrapper {
+    width: 280px;
+    height: 190px;
+  }
+
+  .envelope-flap {
+    border-left-width: 140px;
+    border-right-width: 140px;
+    border-top-width: 95px;
+  }
+
+  .envelope-left-flap {
+    border-left-width: 140px;
+    border-top-width: 95px;
+    border-bottom-width: 95px;
+  }
+
+  .envelope-right-flap {
+    border-right-width: 140px;
+    border-top-width: 95px;
+    border-bottom-width: 95px;
+  }
+
+  .envelope-bottom-flap {
+    border-left-width: 140px;
+    border-right-width: 140px;
+    border-bottom-width: 95px;
+  }
+
+  .wax-seal {
+    bottom: 60px;
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+  }
+
+  /* Polaroid gallery */
+  .polaroid-gallery {
+    gap: 12px;
+    max-width: 320px;
+  }
+
+  /* Letter paper */
+  .letter-paper {
+    padding: 28px 20px;
+    max-height: 85vh;
+  }
+
+  .letter-header {
+    font-size: 1.6rem;
+  }
+
+  .letter-body {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Success card */
+  .success-card h1 {
+    font-size: 2rem;
+  }
+
+  .heart-seal {
+    font-size: 3rem;
+  }
+}
+
+/* ---- Mobile: up to 480px ---- */
+@media (max-width: 480px) {
+  body {
+    padding: 12px 0 30px;
+  }
+
+  /* Main card goes nearly full-width */
+  .container {
+    width: 95%;
+    padding: 24px 16px;
+    gap: 16px;
+    border-radius: 22px;
+    margin: 12px auto;
+  }
+
+  h1 {
+    font-size: 1.55rem;
+    line-height: 1.35;
+  }
+
+  p {
+    font-size: 0.92rem;
+  }
+
+  .ribbon {
+    font-size: 0.72rem;
+    padding: 5px 14px;
+    letter-spacing: 1px;
+  }
+
+  /* Illustration */
+  .illustration-frame {
+    width: 115px;
+    height: 115px;
+  }
+
+  /* Tenor GIF */
+  .tenor-gif-embed {
+    max-width: 130px;
+    border-radius: 14px;
+  }
+
+  /* Buttons — stack on very small screens */
+  .btn {
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+  }
+
+  .btn a {
+    width: 85%;
+    max-width: 260px;
+    font-size: 1rem;
+    padding: 14px 20px;
+    min-width: unset;
+    justify-content: center;
+  }
+
+  /* Music widget — compact */
+  .music-widget {
+    top: 10px;
+    right: 10px;
+    padding: 4px 8px;
+    gap: 8px;
+    border-radius: 30px;
+  }
+
+  .music-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 0.88rem;
+  }
+
+  /* Hide expanded details on mobile to save space */
+  .music-widget:hover .music-details {
+    width: 160px;
+  }
+
+  .volume-slider {
+    width: 55px;
+  }
+
+  /* Envelope overlay */
+  .envelope-intro-text {
+    font-size: 1.35rem;
+    margin-bottom: 22px;
+    padding: 0 16px;
+    height: auto;
+  }
+
+  .envelope-wrapper {
+    width: 240px;
+    height: 165px;
+  }
+
+  .envelope-flap {
+    border-left-width: 120px;
+    border-right-width: 120px;
+    border-top-width: 82px;
+  }
+
+  .envelope-left-flap {
+    border-left-width: 120px;
+    border-top-width: 82px;
+    border-bottom-width: 82px;
+  }
+
+  .envelope-right-flap {
+    border-right-width: 120px;
+    border-top-width: 82px;
+    border-bottom-width: 82px;
+  }
+
+  .envelope-bottom-flap {
+    border-left-width: 120px;
+    border-right-width: 120px;
+    border-bottom-width: 82px;
+  }
+
+  .envelope-letter h3 {
+    font-size: 1.2rem;
+  }
+
+  .envelope-letter p {
+    font-size: 0.75rem;
+  }
+
+  .wax-seal {
+    bottom: 52px;
+    width: 46px;
+    height: 46px;
+    font-size: 1.3rem;
+  }
+
+  /* Letter modal */
+  .letter-paper {
+    padding: 22px 16px;
+    max-height: 88vh;
+    width: 95%;
+  }
+
+  .letter-header {
+    font-size: 1.35rem;
+  }
+
+  .letter-body {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    min-height: auto;
+  }
+
+  .letter-footer {
+    font-size: 1.2rem;
+  }
+
+  .letter-close-btn {
+    font-size: 0.9rem;
+    padding: 10px 28px;
+  }
+
+  /* Polaroid gallery */
+  .polaroid-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .polaroid-caption {
+    font-size: 0.7rem;
+  }
+
+  /* Polaroid modal */
+  .polaroid-modal-content {
+    width: 92%;
+    padding: 12px 12px 22px 12px;
+  }
+
+  .polaroid-modal-caption {
+    font-size: 1rem;
+  }
+
+  .polaroid-modal-close {
+    top: 14px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+
+  /* Success card */
+  .success-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .heart-seal {
+    font-size: 2.6rem;
+  }
+
+  .success-badge {
+    font-size: 0.75rem;
+    padding: 5px 14px;
+  }
+
+  /* Secret letter trigger */
+  .secret-letter-trigger {
+    padding: 12px 18px;
+  }
+
+  .secret-letter-trigger span {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---- Very small phones (SE, etc.): up to 360px ---- */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  .container {
+    padding: 20px 12px;
+  }
+
+  .btn a {
+    width: 92%;
+    padding: 13px 16px;
+  }
+
+  .illustration-frame {
+    width: 100px;
+    height: 100px;
+  }
+
+  .envelope-wrapper {
+    width: 210px;
+    height: 145px;
+  }
+
+  .envelope-flap {
+    border-left-width: 105px;
+    border-right-width: 105px;
+    border-top-width: 72px;
+  }
+
+  .envelope-left-flap {
+    border-left-width: 105px;
+    border-top-width: 72px;
+    border-bottom-width: 72px;
+  }
+
+  .envelope-right-flap {
+    border-right-width: 105px;
+    border-top-width: 72px;
+    border-bottom-width: 72px;
+  }
+
+  .envelope-bottom-flap {
+    border-left-width: 105px;
+    border-right-width: 105px;
+    border-bottom-width: 72px;
+  }
+
+  .wax-seal {
+    bottom: 44px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.15rem;
+  }
+}
+
+/* ---- Landscape mobile (short viewport) ---- */
+@media (max-height: 500px) and (orientation: landscape) {
+  body {
+    align-items: flex-start;
+    padding: 10px 0 20px;
+  }
+
+  .container {
+    margin: 8px auto;
+    gap: 12px;
+    padding: 18px 20px;
+  }
+
+  .illustration-frame {
+    width: 90px;
+    height: 90px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #envelope-overlay {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .envelope-intro-text {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    width: 40%;
+    height: auto;
+  }
+
+  .envelope-wrapper {
+    width: 220px;
+    height: 150px;
+    flex-shrink: 0;
+  }
+}
