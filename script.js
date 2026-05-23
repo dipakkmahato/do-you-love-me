@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 6. Shake card and scale YES button on NO page transitions
   initPlayfulRejection();
+
+  // 7. Start Again / Try Again buttons back to home
+  initRestartButtons();
 });
 
 /* ==========================================
@@ -525,6 +528,61 @@ function initEscapingButton() {
         btnYes.style.transform = `scale(${newScale})`;
       }
     }
+  }
+}
+
+/* ==========================================
+   6. RESTART / TRY AGAIN BACK TO HOME
+   ========================================== */
+function initRestartButtons() {
+  const restartButtons = [
+    document.getElementById("btn-start-again"),
+    document.getElementById("btn-try-again")
+  ].filter(Boolean);
+
+  if (!restartButtons.length) return;
+
+  restartButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const overlay = document.getElementById("heart-redirect-overlay");
+      const burst = document.getElementById("heart-burst");
+
+      sessionStorage.removeItem("envelope_skipped");
+
+      if (!overlay || !burst) {
+        window.location.href = "index.html";
+        return;
+      }
+
+      burst.innerHTML = "";
+      overlay.classList.add("active");
+      createHeartBurst(burst);
+
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 1100);
+    });
+  });
+}
+
+function createHeartBurst(container) {
+  const hearts = ["❤️", "💖", "💕", "💞", "✨", "🌸"];
+  const totalHearts = 22;
+
+  for (let i = 0; i < totalHearts; i++) {
+    const heart = document.createElement("span");
+    const angle = (i / totalHearts) * Math.PI * 2;
+    const distance = 70 + Math.random() * 75;
+    const x = Math.cos(angle) * distance;
+    const y = Math.sin(angle) * distance;
+
+    heart.className = "burst-heart";
+    heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+    heart.style.setProperty("--burst-x", `${x}px`);
+    heart.style.setProperty("--burst-y", `${y}px`);
+    heart.style.animationDelay = `${Math.random() * 0.18}s`;
+
+    container.appendChild(heart);
   }
 }
 

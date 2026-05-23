@@ -1037,6 +1037,175 @@ p {
   50%       { transform: translateY(-10px) rotate(2deg); }
 }
 
+/* ==========================================
+   HEART REDIRECT OVERLAY
+   ========================================== */
+#heart-redirect-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: radial-gradient(circle at center, rgba(255,107,139,0.97) 0%, rgba(190,24,93,0.98) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.77,0,0.175,1),
+              visibility 0.5s;
+}
+
+#heart-redirect-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.heart-burst-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burst-heart {
+  position: absolute;
+  font-size: 2rem;
+  animation: burstHeart 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0;
+}
+
+@keyframes burstHeart {
+  0%   { transform: translate(0,0) scale(0); opacity: 1; }
+  70%  { opacity: 1; }
+  100% { transform: translate(var(--burst-x), var(--burst-y)) scale(1.2); opacity: 0; }
+}
+
+.redirect-message {
+  font-family: var(--font-fancy);
+  font-size: 1.8rem;
+  color: white;
+  text-align: center;
+  padding: 0 24px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+  animation: fadeInUp 0.6s 0.3s both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   RESTART / TRY-AGAIN BUTTONS
+   ========================================== */
+.btn-restart,
+.btn-tryagain {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 320px;
+  padding: 16px 28px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+/* Shimmer sweep */
+.btn-restart::after,
+.btn-tryagain::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.btn-restart:hover::after,
+.btn-tryagain:hover::after {
+  left: 160%;
+}
+
+/* YES page — warm gold-rose gradient */
+.btn-restart {
+  background: linear-gradient(135deg, #f59e0b 0%, #e11d48 100%);
+  color: white;
+  box-shadow: 0 8px 28px rgba(229, 62, 62, 0.35);
+}
+
+.btn-restart:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 16px 40px rgba(229, 62, 62, 0.5);
+}
+
+.btn-restart:active {
+  transform: scale(0.97);
+}
+
+/* NO3 page — soft purple-pink */
+.btn-tryagain {
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  color: white;
+  box-shadow: 0 8px 28px rgba(167, 139, 250, 0.4);
+}
+
+.btn-tryagain:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 16px 40px rgba(167, 139, 250, 0.55);
+}
+
+.btn-tryagain:active {
+  transform: scale(0.97);
+}
+
+.restart-icon {
+  font-size: 1.2rem;
+  display: inline-block;
+  animation: heartPulse 1.8s ease-in-out infinite;
+}
+
+/* Divider line between main buttons and restart */
+.restart-divider {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  opacity: 0.6;
+  letter-spacing: 1px;
+  margin: 4px 0 0;
+}
+
+/* ==========================================
+   RESPONSIVE — restart buttons
+   ========================================== */
+@media (max-width: 480px) {
+  .btn-restart,
+  .btn-tryagain {
+    max-width: 100%;
+    font-size: 0.95rem;
+    padding: 14px 20px;
+  }
+
+  .redirect-message {
+    font-size: 1.4rem;
+  }
+}
+
 @keyframes floatChibi {
   from { transform: translateY(0); }
   to { transform: translateY(-8px); }

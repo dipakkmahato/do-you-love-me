@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yay! I Knew It! 🥰❤️</title>
+  <meta name="description" content="You said YES! 💖" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
@@ -17,8 +18,19 @@
 
   <!-- Music toggle widget -->
   <div class="music-widget">
-    <div class="music-tooltip">Play Sweet Music 🎵</div>
     <button class="music-btn" id="music-toggle-btn" aria-label="Toggle Music">🔇</button>
+    <div class="music-details">
+      <span class="music-title-text" id="music-track-title">🎵 Music Box Arpeggio</span>
+      <button class="track-skip-btn" id="music-skip-btn" title="Next Song">⏭️</button>
+      <input type="range" class="volume-slider" id="music-volume" min="0" max="1" step="0.1" value="0.6" aria-label="Volume">
+    </div>
+    <div class="music-tooltip">Play Sweet Music 🎵</div>
+  </div>
+
+  <!-- Heart redirect overlay (shown on "Start Again" click) -->
+  <div id="heart-redirect-overlay">
+    <div class="heart-burst-container" id="heart-burst"></div>
+    <div class="redirect-message">Starting our story again... 💕</div>
   </div>
 
   <div class="container success-card">
@@ -27,20 +39,82 @@
 
     <!-- Generated couple illustration frame -->
     <div class="illustration-frame">
-      <img src="./couple_illustration.png" alt="Cute Chibi Couple" />
+      <img src="./couple_illustration.png" alt="Cute Chibi Couple"
+           onerror="this.style.display='none'; document.getElementById('yes-illus-fallback').style.display='flex';" />
+      <div id="yes-illus-fallback" class="illustration-placeholder" style="display:none;">💑💕</div>
     </div>
 
-    <!-- Cute Tenor GIF embed -->
-    <div class="tenor-gif-embed" data-postid="253027946666209433" data-share-method="host" data-aspect-ratio="1.37853" data-width="100%">
-      <a href="https://tenor.com/view/mochi-cat-mochi-and-goma-goma-and-peach-mochi-mochi-peach-cat-gif-gif-253027946666209433">Mochi Cat GIF</a>from
-      <a href="https://tenor.com/search/mochi-gifs">Mochi GIFs</a>
+    <!-- Manja sticker bouncing -->
+    <div class="sticker-frame">
+      <img src="./manja_sticker.png" alt="Love Sticker 💕" class="manja-sticker" />
     </div>
-    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
     <!-- Success Content -->
     <div class="heart-seal">💖</div>
     <h1>I knew it! You Love me a lot 😘</h1>
     <p>You made me the happiest person in the universe! 🌍💖✨</p>
+
+    <!-- Secret Letter Trigger -->
+    <div class="secret-letter-trigger" id="secret-letter-trigger" role="button" tabindex="0"
+         aria-label="Open secret love letter">
+      <span>💌</span>
+      <span>Read My Secret Letter to You</span>
+      <span>✨</span>
+    </div>
+
+    <!-- Polaroid Memories Gallery -->
+    <div class="polaroid-gallery" id="polaroid-gallery">
+      <div class="polaroid-item">
+        <div class="polaroid-img-wrapper">
+          <img src="./couple_illustration.png" alt="Us together" />
+        </div>
+        <div class="polaroid-caption">Our beginning 🌸</div>
+      </div>
+      <div class="polaroid-item">
+        <div class="polaroid-img-wrapper">
+          <img src="./manja_sticker.png" alt="Love sticker" />
+        </div>
+        <div class="polaroid-caption">Always together 💕</div>
+      </div>
+      <div class="polaroid-item">
+        <div class="polaroid-img-wrapper">
+          <img src="./couple_illustration.png" alt="Forever us" />
+        </div>
+        <div class="polaroid-caption">Forever ours 💍</div>
+      </div>
+      <div class="polaroid-item">
+        <div class="polaroid-img-wrapper">
+          <img src="./manja_sticker.png" alt="Cute sticker" />
+        </div>
+        <div class="polaroid-caption">Best day ever ✨</div>
+      </div>
+    </div>
+
+    <!-- ❤️ Start Again Button -->
+    <button class="btn-restart" id="btn-start-again" aria-label="Start the experience again">
+      <span class="restart-icon">❤️</span>
+      <span class="restart-text">Start Again</span>
+      <span class="restart-icon">🏠</span>
+    </button>
+  </div>
+
+  <!-- Polaroid Modal -->
+  <div class="polaroid-modal" id="polaroid-modal">
+    <button class="polaroid-modal-close" id="polaroid-modal-close" aria-label="Close">✕</button>
+    <div class="polaroid-modal-content">
+      <img class="polaroid-modal-img" id="polaroid-modal-img" src="" alt="Memory" />
+      <div class="polaroid-modal-caption" id="polaroid-modal-caption"></div>
+    </div>
+  </div>
+
+  <!-- Secret Letter Modal -->
+  <div class="letter-modal" id="letter-modal">
+    <div class="letter-paper">
+      <div class="letter-header">💌 My Heart's Letter</div>
+      <div class="letter-body" id="letter-body"></div>
+      <div class="letter-footer">Forever yours 🌹</div>
+      <button class="letter-close-btn" id="letter-close-btn">Close Letter 💝</button>
+    </div>
   </div>
 
   <script src="./script.js"></script>
