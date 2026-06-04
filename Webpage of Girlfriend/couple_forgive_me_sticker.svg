@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Couple forgive me sticker</title>
+  <desc id="desc">A cute couple sticker with one person apologizing and asking for forgiveness.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="62%">
+      <stop offset="0%" stop-color="#fff8fb"/>
+      <stop offset="68%" stop-color="#ffe7f0"/>
+      <stop offset="100%" stop-color="#ffd2e2"/>
+    </radialGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff85a2"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#be185d" flood-opacity=".18"/>
+    </filter>
+  </defs>
+
+  <circle cx="256" cy="256" r="236" fill="url(#bg)"/>
+  <circle cx="104" cy="102" r="18" fill="#fff" opacity=".75"/>
+  <circle cx="410" cy="122" r="13" fill="#fff" opacity=".7"/>
+  <circle cx="429" cy="358" r="21" fill="#fff" opacity=".6"/>
+  <path d="M256 87c22-35 74-22 74 22 0 41-50 65-74 91-24-26-74-50-74-91 0-44 52-57 74-22z" fill="#ff4b72" opacity=".18"/>
+
+  <g filter="url(#softShadow)">
+    <ellipse cx="258" cy="408" rx="158" ry="32" fill="#d94683" opacity=".16"/>
+
+    <g transform="translate(302 168)">
+      <path d="M44 6c41 0 74 36 74 80v58c0 16-13 29-29 29H0c-16 0-29-13-29-29V86C-29 42 3 6 44 6z" fill="#5b2b48"/>
+      <circle cx="44" cy="88" r="61" fill="#ffd7c2"/>
+      <path d="M-12 80c8-44 35-67 74-67 35 0 60 25 65 65-23-4-48-19-66-43-18 24-45 40-73 45z" fill="#5b2b48"/>
+      <circle cx="19" cy="91" r="6" fill="#3b2336"/>
+      <circle cx="68" cy="91" r="6" fill="#3b2336"/>
+      <path d="M31 121c10 8 25 8 35 0" fill="none" stroke="#c2415d" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="4" cy="111" r="11" fill="#ff9bb2" opacity=".65"/>
+      <circle cx="85" cy="111" r="11" fill="#ff9bb2" opacity=".65"/>
+      <path d="M-14 157h116c18 0 33 15 33 33v76H-47v-76c0-18 15-33 33-33z" fill="url(#pink)"/>
+      <path d="M3 190c26 27 56 27 82 0" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" opacity=".75"/>
+      <path d="M-28 199c-31 23-64 43-96 60" fill="none" stroke="#ffd7c2" stroke-width="24" stroke-linecap="round"/>
+    </g>
+
+    <g transform="translate(120 214)">
+      <path d="M74 9c38 0 69 31 69 69v48H5V78C5 40 36 9 74 9z" fill="#3b2336"/>
+      <circle cx="74" cy="84" r="57" fill="#ffd7c2"/>
+      <path d="M19 70c10-35 35-55 68-55 26 0 47 15 58 42-27 8-59 3-85-20-13 19-27 29-41 33z" fill="#3b2336"/>
+      <circle cx="52" cy="89" r="6" fill="#3b2336"/>
+      <circle cx="95" cy="89" r="6" fill="#3b2336"/>
+      <path d="M61 121c9 7 20 7 29 0" fill="none" stroke="#c2415d" stroke-width="7" stroke-linecap="round"/>
+      <path d="M32 151h85c18 0 33 15 33 33v87H-1v-87c0-18 15-33 33-33z" fill="url(#blue)"/>
+      <path d="M117 183c30-12 59-27 84-49" fill="none" stroke="#ffd7c2" stroke-width="23" stroke-linecap="round"/>
+      <path d="M54 172c6 25 18 42 36 52" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" opacity=".72"/>
+      <ellipse cx="82" cy="283" rx="63" ry="20" fill="#5b2b48" opacity=".13"/>
+    </g>
+
+    <g transform="translate(169 92)">
+      <path d="M39 0h132c21 0 38 16 38 36v58c0 20-17 36-38 36H88l-39 35 9-35H39C17 130 0 114 0 94V36C0 16 17 0 39 0z" fill="#fff" stroke="#ff8da1" stroke-width="7"/>
+      <text x="104" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="31" font-weight="800" fill="#be185d">Forgive</text>
+      <text x="104" y="91" text-anchor="middle" font-family="Arial, sans-serif" font-size="31" font-weight="800" fill="#be185d">me?</text>
+    </g>
+
+    <path d="M257 316c14-25 49-15 49 14 0 28-33 43-49 61-16-18-49-33-49-61 0-29 35-39 49-14z" fill="#ff4b72"/>
+    <path d="M357 354c10-18 35-11 35 10 0 20-24 31-35 44-12-13-36-24-36-44 0-21 25-28 36-10z" fill="#f59e0b" opacity=".8"/>
+    <path d="M151 367c9-15 30-9 30 9 0 17-20 27-30 38-10-11-30-21-30-38 0-18 21-24 30-9z" fill="#ec4899" opacity=".75"/>
+  </g>
+</svg>
