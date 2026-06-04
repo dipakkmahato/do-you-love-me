@@ -362,11 +362,12 @@ function initCinematicEnvelope() {
   // Typewriter effect on the greeting caption
   const greetingText = "To My Favorite Person... You have a secret letter 💌";
   const textContainer = document.getElementById("envelope-typewriter");
+  const greetingChars = Array.from(greetingText);
   let charIdx = 0;
 
   function typeText() {
-    if (charIdx < greetingText.length) {
-      textContainer.innerHTML += greetingText.charAt(charIdx);
+    if (charIdx < greetingChars.length) {
+      textContainer.innerHTML += greetingChars[charIdx];
       charIdx++;
       setTimeout(typeText, 70);
     }
