@@ -756,16 +756,16 @@ function initSecretLetter() {
 
   if (!trigger || !modal) return;
 
-  const letterText = `Dear 𝓚𝓸𝓶𝓪𝓵,
+  const letterText = `Dear Bachcha,
 
 From the very moment you walked into my life, everything changed for the better. Your beautiful smile, your playful laughter, and the sweet way you care for me has filled my world with absolute happiness.
 
-I know I can be silly sometimes, but please know that my heart belongs to you and only you. 𝓚𝓸𝓶𝓪𝓵, you are my favorite person, my safest harbor, and my greatest blessing. Thank you for making me the happiest person in the universe today by saying YES!
+I know I can be silly sometimes, but please know that my heart belongs to you and only you. Bachcha, you are my favorite person, my safest harbor, and my greatest blessing. Thank you for making me the happiest person in the universe today by saying YES!
 
 I promise to cherish you, protect you, and love you more and more with each passing day. 
 
 Forever and always yours,
-𝓚𝓸𝓶𝓪𝓵's Favorite Person ❤️`;
+Bachcha's Favorite Person ❤️`;
 
   const letterChars = Array.from(letterText);
   let typingIdx = 0;
